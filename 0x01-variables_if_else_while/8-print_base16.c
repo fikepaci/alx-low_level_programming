@@ -1,19 +1,26 @@
 #include <stdio.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Description: Prints base 16 characters
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
-	int a;
-	char letter;
-	
-	for (a=0; a<10; a++)
+	int letter;
+
+	letter = 48;
+	while (letter != 58)
 	{
-		putchar((a%10) + '0');
+		putchar (letter);
+		letter++;
 	}
-	for (letter='a'; letter<='f'; letter++)
+	letter = 97;
+	while (letter != 103)
 	{
-		putchar(letter);
+		putchar (letter);
+		letter++;
 	}
 	putchar('\n');
 	return (0);
