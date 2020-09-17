@@ -1,18 +1,24 @@
 #include <stdio.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Description: Prints the alphabet using ascii values except e and q
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
 	char letter;
-	
-	for (letter='a'; letter<='z'; letter++)
+
+	letter = 'a';
+	while (letter != '{')
 	{
-		if(letter != 'e' && letter != 'q')
+		if (letter != 'e' && letter != 'q')
 		{
-			putchar(letter);
+			putchar (letter);
 		}
+		letter++;
 	}
-    putchar('\n');
+	putchar('\n');
 	return (0);
 }
