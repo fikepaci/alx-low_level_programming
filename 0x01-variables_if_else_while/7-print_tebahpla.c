@@ -1,15 +1,21 @@
 #include <stdio.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Description: Prints the alphabet using ascii backwards
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
 	char letter;
-	
-	for (letter='z'; letter>='a'; letter--)
+
+	letter = 'z';
+	while (letter != '`')
 	{
-		putchar(letter);
+		putchar (letter);
+		letter--;
 	}
-    putchar('\n');
+	putchar('\n');
 	return (0);
 }
