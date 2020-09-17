@@ -1,14 +1,20 @@
 #include <stdio.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Description: Prints numbers of base 10 starting at 0
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
-	int a;
-	
-	for (a=0; a<10; a++)
+	int number;
+
+	number = 48;
+	while (number != ':')
 	{
-		putchar((a%10 + '0'));
+		putchar(number);
+		number++;
 	}
 	putchar('\n');
 	return (0);
