@@ -1,6 +1,5 @@
-#include <unistd.h>
 #include <stdio.h>
-int _putchar(char Holberton);
+int _putchar(char c);
 /**
  * main - printing Holberton string
  *
@@ -8,14 +7,14 @@ int _putchar(char Holberton);
  */
 int main(void)
 {
-	char *string;
-	int i;
+char *string;
+int i;
 
-	string = "Holberton";
-	for (i = 0; i <= 8; i++)
-	{
-		_putchar(string[i]);
-	}
-	_putchar('\n');
-	return (0);
+string = "Holberton";
+for (i = 0; i <= 8; i++)
+{
+_putchar(string[i]);
+}
+_putchar('\n');
+return (0);
 }
