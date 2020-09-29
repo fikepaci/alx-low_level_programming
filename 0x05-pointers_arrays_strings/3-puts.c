@@ -7,9 +7,13 @@
 
 void _puts(char *str)
 {
-
+while (*ch)
+{
 _putchar(*str);
+str++;
+}
 
 _putchar('\n');
 
+return (0);
 }
