@@ -9,16 +9,18 @@
 
 void print_diagsums(int *a, int size)
 {
-int m;
-int j = size - 1;
-int diagright = 0;
-int diagleft = 0;
+int i, j, leftsum, rightsum;
 
-for (m = 0; m < (size * size);
-m = m + (size + 1), j = j + (size - 1))
+leftsum = 0;
+rightsum = 0;
+
+for (i = 0; i < size * size; i += size + 1)
 {
-diagleft += a[m];
-diagright += a[j];
+leftsum += a[i];
 }
-printf("%i, %i\n", diagleft, diagright);
+for (j = size - 1; j < (size * size) - 1; j += size - 1)
+{
+rightsum += a[j];
+}
+printf("%d, %d\n", leftsum, rightsum);
 }
