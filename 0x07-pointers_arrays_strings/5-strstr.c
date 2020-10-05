@@ -9,25 +9,22 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-int index;
+char *start;
+char *search;
 
-if (*needle == 0)
-return (haystack);
-
-while (*haystack)
+while (*haystack != '\0')
 {
-index = 0;
-
-if (haystack[index] == needle[index])
+start = haystack;
+search = needle;
+while (*search == *haystack && *haystack != 0
+&& *searxh != 0)
 {
-do {
-if (needle[index + 1] == '\0'
-return (haystack);
-
-index++;
-} while (haystack[index] == needle[index]);
-}
 haystack++;
+search++;
 }
-return ('\0');
+if (*search == 0)
+return (start);
+haystack = start + 1;
+}
+return (0);
 }
