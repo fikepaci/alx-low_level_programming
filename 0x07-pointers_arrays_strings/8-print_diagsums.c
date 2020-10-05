@@ -9,11 +9,19 @@
 
 void print_diagsums(int *a, int size)
 {
-int i, sum1 = 0, sum2 = 0;
+int primc, sum1, sum2, diagc1, diagc2, row;
 
-for (i = 0; i < size * size; i += (size + 1))
-sum1 += a[i];
-for (i = size - 1; i < (size * size) - (size - 1); i += (size - 1))
-sum2 += a[i];
-printf("%d, %d\n", sum1, sum2);
+primc = 0, sum1 = 0, sum2 = 0, diagc1 = 0, diagc2 = 0, row = 0;
+while (primc < size * size)
+{
+if (primc == diagc1 + (row * size))
+sum1 += a[primc];
+if (primc == (size - diagc2 - 1) + (row * size))
+sum2 += a[primc];
+if (((primc + 1) % size) == 0)
+row++, diagc1++, diagc2++;
+primc++;
+}
+printf("%d, ", sum1);
+printf("%d\n", sum2);
 }
