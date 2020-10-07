@@ -10,11 +10,11 @@ int _strlen_recursion(char *s)
 {
 
 int c = 0;
-if (*s == NULL)
-return (c);
-else
+
+if (*s)
 {
 c++;
-return (_strlen_recursion(++s));
+c +=  _strlen_recursion(s + 1);
 }
+return (c);
 }
