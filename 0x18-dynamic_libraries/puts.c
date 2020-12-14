@@ -1,5 +1,5 @@
 #include <stdio.h>
 void _puts(char *s)
 {
-	        printf("dynamic library");
+	printf("dynamic library");
 }

@@ -1,5 +1,5 @@
-nclude <stdio.h>
+#include <stdio.h>
 char *_strpbrk(char *s, char *accept)
 {
-	        printf("dynamic library");
+	printf("dynamic library");
 }
